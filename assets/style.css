@@ -1,0 +1,221 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-align: center;
+  
+}
+
+/* ============================== geral ================================== */
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-image: url(https://i.pinimg.com/originals/0b/c0/a9/0bc0a90484d75835bfd8b44567ab990d.gif);
+  background-size: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: center;
+  font-family:'Inter', Arial, sans-serif;
+  line-height: 160%;
+}
+
+ /* ============================== header ================================== */
+
+.header {
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: transform .3s;
+ 
+}
+
+header div:hover {
+  transform: scale(1.1)
+}
+
+header .avatar {
+  width: 8rem;
+  text-align: center;
+  border: 4px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6rem;
+  margin-bottom: 4px;
+
+} 
+
+header div img {
+  width: 100%;
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ============================== cards ================================== */
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1.2rem;
+  width: 100%;
+}
+
+
+section .card-container {
+  background: rgba(99, 97, 97, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 32px;
+  padding-top: 24px;
+  border-radius: 8px;
+  margin-top: 3px;
+
+}
+
+main {
+  max-width: 580px;
+  width: 90%;
+  margin: 32px auto;
+  display: grid;
+  gap: 24px;
+}
+
+section {
+  color: #fff;
+
+}
+
+
+section h2 {
+  letter-spacing: -0.47px;
+}
+
+section p {
+  letter-spacing: -0.18px;
+  color: #fff;
+}
+
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin-top: 10px;
+}
+
+
+section ul li {
+  transition: transform.3s;
+  
+}
+
+
+section ul li:hover {
+  transform: scale(1.1);
+  
+}
+
+.movies-list img,
+.series-list img  {
+  border-radius: 8px;
+}
+
+.movies-list {
+  animation-delay: 0s;
+}
+
+.series-list {
+  animation-delay: 0.2s;
+}
+
+
+.social-list ul ul li {
+  transition: transform.3s;
+  
+}
+
+.social-list ul li:hover {
+  transform: scale(1.1);
+  
+}
+
+/* ============================== footer ================================== */
+.divider{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 2px;
+  background: linear-gradient(to left, rgb(8, 144, 228), #c03bf9);
+  align-items: center;
+}
+
+.footer_copy {
+  text-align: center;
+  font-family: 'signika', Arial, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: auto;
+}
+
+/* ============================== animações ================================== */
+
+header div {
+  animation: fromTop .7s .2s backwards;
+}
+
+main section {
+  animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0;
+}
+
+main section:nth-child(2) {
+  animation-delay: .3s;
+}
+
+main section:nth-child(3) {
+  animation-delay: .6s;
+}
+
+@keyframes fromTop {
+  from {
+      opacity: 0;
+      transform: translateY(-30px)
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0)
+  }
+}
+
+@keyframes fromBottom {
+  from {
+      opacity: 0;
+      transform: translateY(30px)
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0)
+  }
+}
+
+
+/* ============================== responsividade ================================== */
+
+@media (min-width: 1024px) {
+  .cards {
+    width: 45%;
+  }
+}
+
